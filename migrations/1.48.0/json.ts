@@ -10,8 +10,7 @@ const transform: Transform = (file: FileInfo, api: API) => {
 
   const originalJson = JSON.parse(file.source);
 
-  // Remove the root, env, and parser properties, it's unlikely that these have been modified by the extension authors
-  delete originalJson.root;
+  // Remove the env, and parser properties, it's unlikely that these have been modified by the extension authors
   delete originalJson.env;
   delete originalJson.parser;
 
